@@ -1,0 +1,15 @@
+.navbar-label::before, .dropdown-item-label::before {
+  display: block;
+  content: attr(data-label);
+  content: attr(data-label) / "";
+  height: 0;
+  visibility: hidden;
+  overflow: hidden;
+  user-select: none;
+  pointer-events: none;
+  font-weight: 600;
+
+  @media speech {
+    display: none;
+  }
+}
