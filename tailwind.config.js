@@ -16,23 +16,52 @@ module.exports = {
     extend: {
       keyframes: {
         wiggle: {
-          '0%': { transform: 'rotate(0deg)' },
-          '25%': { transform: 'rotate(-3deg)' },
-          '75%': { transform: 'rotate(3deg)' },
-          '100%': { transform: 'rotate(0deg)' },
-        }
+          '0%': { transform: 'rotate(0deg) scale(1.1)' },
+          '25%': { transform: 'rotate(-3deg) scale(1.1)' },
+          '75%': { transform: 'rotate(3deg) scale(1.1)' },
+          '100%': { transform: 'rotate(0deg) scale(1.1)' },
+        },
+        shake: {
+          '0%': {
+            transform: 'translateX(0)',
+          },
+          '6.5%': {
+            transform: 'translateX(-6px) rotateY(-9deg)',
+          },
+          '18.5%': {
+            transform: 'translateX(5px) rotateY(7deg)',
+          },
+          '31.5%': {
+            transform: 'translateX(-3px) rotateY(-5deg)',
+          },
+          '43.5%': {
+            transform: 'translateX(2px) rotateY(3deg)',
+          },
+          '50%': {
+            transform: 'translateX(0)',
+          },
+        },
       },
       animation: {
-        wiggle: 'wiggle 1s ease-in-out infinite',
+        wiggle: 'wiggle 1s linear infinite',
+        shake: 'shake 1s ease-in-out infinite',
       },
       colors: {
         'emerald-750': '#047857',
+        'slate-750': '#293548',
+        'slate-850': '#172033',
       },
       boxShadow: {
         'radial-lg': '0 0 15px 3px rgba(0, 0, 0, 0.3)',
       },
       fontFamily: {
-        'sans': ['Be Vietnam Pro', ...defaultTheme.fontFamily.sans],
+        sans: [
+          "Inter var, sans-serif",
+          {
+            fontFeatureSettings: '"cv11", "cv02", "cv03", "cv04"',
+            fontVariationSettings: '"opsz" 32'
+          }, ...defaultTheme.fontFamily.sans
+        ],
       },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
@@ -45,5 +74,6 @@ module.exports = {
     require('@tailwindcss/typography'),
     require('@tailwindcss/forms'),
     require('@tailwindcss/aspect-ratio'),
+    require('daisyui'),
   ],
 }

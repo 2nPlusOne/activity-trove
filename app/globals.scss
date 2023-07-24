@@ -12,6 +12,22 @@
   -webkit-text-size-adjust: 100%;
 }
 
+.bold-pseudo::before {
+  display: block;
+  content: attr(data-label);
+  content: attr(data-label) / "";
+  height: 0;
+  visibility: hidden;
+  overflow: hidden;
+  user-select: none;
+  pointer-events: none;
+  font-weight: 700;
+
+  @media speech {
+    display: none;
+  }
+}
+
 /* :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
