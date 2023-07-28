@@ -16,10 +16,10 @@ module.exports = {
     extend: {
       keyframes: {
         wiggle: {
-          '0%': { transform: 'rotate(0deg) scale(1.1)' },
-          '25%': { transform: 'rotate(-3deg) scale(1.1)' },
-          '75%': { transform: 'rotate(3deg) scale(1.1)' },
-          '100%': { transform: 'rotate(0deg) scale(1.1)' },
+          '0%': { transform: 'rotate(0deg)' },
+          '25%': { transform: 'rotate(-3deg)' },
+          '75%': { transform: 'rotate(3deg)' },
+          '100%': { transform: 'rotate(0deg)' },
         },
         shake: {
           '0%': {
@@ -41,15 +41,34 @@ module.exports = {
             transform: 'translateX(0)',
           },
         },
+        heartBeat: {
+          '0%': {
+            transform: 'scale(1)',
+          },
+          '14%': {
+            transform: 'scale(1.2)',
+          },
+          '28%': {
+            transform: 'scale(1)',
+          },
+          '42%': {
+            transform: 'scale(1.2)',
+          },
+          '70%': {
+            transform: 'scale(1)',
+          },
+        },
       },
       animation: {
         wiggle: 'wiggle 1s linear infinite',
         shake: 'shake 1s ease-in-out infinite',
+        heartBeat: 'heartBeat 1s ease-in-out infinite',
       },
       colors: {
         'emerald-750': '#047857',
         'slate-750': '#293548',
         'slate-850': '#172033',
+        'slate-1000': '#000004',
       },
       boxShadow: {
         'radial-lg': '0 0 15px 3px rgba(0, 0, 0, 0.3)',
