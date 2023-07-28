@@ -16,7 +16,8 @@ export async function GET(request: NextRequest) {
     );
   } else {
     data = jokes[Math.floor(Math.random() * jokes.length)];
-    await new Promise((resolve) => setTimeout(resolve, 500));
+    // simulate asynchronous response by waiting between 100ms and 500ms
+    await new Promise((resolve) => setTimeout(resolve, Math.floor(Math.random() * 400) + 100));
   }
 
   // return the joke as json
