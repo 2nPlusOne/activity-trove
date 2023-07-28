@@ -73,13 +73,15 @@ const Navbar: React.FC = () => {
           href="/"
           className="flex flex-row items-center justify-center group focus:outline-offset-8 rounded-md  "
         >
-          <img
-            src="noto-dragon.svg"
-            className="group-hover:animate-wiggle group-focus:animate-wiggle group-hover:after:scale-105 group-focus:after:scale-105"
-            alt="Logo"
-            width={35}
-            height={35}
-          />
+          <div className="group-hover:scale-110 group-focus:scale-110 transition-all">
+            <img
+              src="noto-dragon.svg"
+              className="group-hover:animate-wiggle group-focus:animate-wiggle"
+              alt="Logo"
+              width={35}
+              height={35}
+            />
+          </div>
           <h1
             data-label="activity center"
             className="bold-pseudo text-2xl pl-4 transition-all 
