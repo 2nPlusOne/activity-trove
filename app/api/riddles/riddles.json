@@ -24,7 +24,7 @@
     "answer": "anchor"
   },
   {
-    "riddle": "I'm very tempting, so its said, I have a shiny coat of red, and my flesh is white beneath. I smell so sweet, taste good to eat, and help to guard your teeth.",
+    "riddle": "I'm very tempting, so it's said, I have a shiny coat of red, and my flesh is white beneath. I smell so sweet, taste good to eat, and help to guard your teeth.",
     "answer": "apple"
   },
   {
@@ -460,7 +460,7 @@
     "answer": "frost"
   },
   {
-    "riddle": "My first is in fish but no in snail. My second is in rabbit but no in tail. My third is in up but not in down. My fourth is in tiara but not in crown. My fifth is in tree you plainly see. My whole a food for you and me.",
+    "riddle": "My first is in fish but not in snail. My second is in rabbit but not in tail. My third is in up but not in down. My fourth is in tiara but not in crown. My fifth is in tree you plainly see. My whole a food for you and me.",
     "answer": "fruit"
   },
   {
@@ -900,7 +900,7 @@
     "answer": "piano"
   },
   {
-    "riddle": "My first is twice in apple but not once in tart. My second is in liver but not in heart. My third is in giant and also in ghost. Whole I’m best when I am roast.",
+    "riddle": "My first is twice in pepper but not once in tart. My second is in liver but not in heart. My third is in giant and also in ghost. Whole I’m best when I am roast.",
     "answer": "pig"
   },
   {
@@ -1084,7 +1084,7 @@
     "answer": "silence"
   },
   {
-    "riddle": "My first is in some but not in all. My second is into but not in tall. My third in little but no in big. My fourth in port but not in pig. My whole is made in nature's way. For clothing, rugs used every day.",
+    "riddle": "My first is in some but not in all. My second in rise but not in fall. My third in little but not in big. My fourth in port but not in pig. My whole is made in nature's way. For clothing, rugs used every day.",
     "answer": "silk"
   },
   {
@@ -1234,10 +1234,6 @@
   {
     "riddle": "He has one and a person has two. A citizen has three. And a human being has four. A personality has five. And an inhabitant of earth has six.",
     "answer": "syllable"
-  },
-  {
-    "riddle": "Late afternoons I often bathe. I'll soak in water piping hot. My essence goes through. My see through clothes. Used up am I - I've gone to pot.",
-    "answer": "teabag"
   },
   {
     "riddle": "What starts with a 'T', ends with a 'T', and has T in it?",
@@ -1412,10 +1408,6 @@
     "answer": "wave"
   },
   {
-    "riddle": "My first is in wield, sever bones and marrow. My second is in blade, forged in cold steel. My third is an arbalest, and also in arrows. My fourth is in power, plunged through a shield. My fifth is in honor, and also in vows. My last will put an end to it all.",
-    "answer": "weapon"
-  },
-  {
     "riddle": "As round as an apple. As deep as a cup. All the king's horses can't pull it up.",
     "answer": "well"
   },
@@ -1474,6 +1466,5 @@
   {
     "riddle": "When I am young I am tall. When I am old I am short. What am I?",
     "answer": "candle"
-  },
-
+  }
 ]
