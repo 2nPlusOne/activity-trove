@@ -63,6 +63,7 @@ const Footer: React.FC = () => {
 const BuyMeACoffee: React.FC = () => {
   return (
     <a
+      title="Buy me a coffee"
       href="https://www.buymeacoffee.com/2nPlusOne"
       target="_blank"
       rel="noreferrer"

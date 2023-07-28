@@ -125,56 +125,58 @@ const NavItem: React.FC<NavItemProps & OnClickProps> = ({
   );
 
   return (
-    <div
-      className={`relative inline-block justify-start items-center group p-3 rounded-md ${
-        route ? "cursor-pointer" : ""
-      }`}
-    >
-      {route ? (
-        // Use Link only when route is defined
-        <Link
-          onClick={onClickFunc}
-          href={route}
-          className="flex flex-row justify-between items-center focus:outline-offset-8 rounded-md"
-        >
-          {content}
-          {subItems && subItems.length > 0 && <DropdownArrayIcon />}
-        </Link>
-      ) : (
-        // Fall back to a div when no route is provided
-        <div className="flex flex-row justify-between items-center">
-          {content}
-          {subItems && subItems.length > 0 && <DropdownArrayIcon />}
-        </div>
-      )}
+    <li>  
       <div
-        className={`flex flex-col w-auto min-w-full whitespace-nowrap absolute
-        left-1/2 -translate-x-1/2 mt-0 space-y-0 text-white bg-slate-800 
-        rounded-lg shadow-lg shadow-slate-950 transition ease-in-out duration-100 
-        opacity-0 pointer-events-none -translate-y-2 scale-75 
-        group-focus-within:opacity-100 group-focus-within:pointer-events-auto group-focus-within:translate-y-2 group-focus-within:scale-100 
-        group-hover:opacity-100 group-hover:pointer-events-auto group-hover:translate-y-2 group-hover:scale-100`}
+        className={`relative inline-block justify-start items-center group p-3 rounded-md ${
+          route ? "cursor-pointer" : ""
+        }`}
       >
-        {subItems?.map((item, index) => (
+        {route ? (
+          // Use Link only when route is defined
           <Link
             onClick={onClickFunc}
-            key={index}
-            href={item.route!}
-            className={`px-2 py-2 text-sm text-left 
-          hover:bg-slate-700 focus:bg-slate-700 transition-colors duration-200 ${
-            // Add rounded corners to bottom of first and top of last item in sub-item groups
-            index === 0
-              ? "rounded-t-lg"
-              : index === subItems.length - 1
-              ? "rounded-b-lg"
-              : ""
-          }`}
+            href={route+"/"}
+            className="flex flex-row justify-between items-center focus:outline-offset-8 rounded-md"
           >
-            {item.title}
+            {content}
+            {subItems && subItems.length > 0 && <DropdownArrayIcon />}
           </Link>
-        ))}
+        ) : (
+          // Fall back to a div when no route is provided
+          <div className="flex flex-row justify-between items-center">
+            {content}
+            {subItems && subItems.length > 0 && <DropdownArrayIcon />}
+          </div>
+        )}
+        <div
+          className={`flex flex-col w-auto min-w-full whitespace-nowrap absolute
+          left-1/2 -translate-x-1/2 mt-0 space-y-0 text-white bg-slate-800 
+          rounded-lg shadow-lg shadow-slate-950 transition ease-in-out duration-100 
+          opacity-0 pointer-events-none -translate-y-2 scale-75 
+          group-focus-within:opacity-100 group-focus-within:pointer-events-auto group-focus-within:translate-y-2 group-focus-within:scale-100 
+          group-hover:opacity-100 group-hover:pointer-events-auto group-hover:translate-y-2 group-hover:scale-100`}
+        >
+          {subItems?.map((item, index) => (
+            <Link
+              onClick={onClickFunc}
+              key={index}
+              href={item.route!}
+              className={`px-2 py-2 text-sm text-left 
+            hover:bg-slate-700 focus:bg-slate-700 transition-colors duration-200 ${
+              // Add rounded corners to bottom of first and top of last item in sub-item groups
+              index === 0
+                ? "rounded-t-lg"
+                : index === subItems.length - 1
+                ? "rounded-b-lg"
+                : ""
+            }`}
+            >
+              {item.title}
+            </Link>
+          ))}
+        </div>
       </div>
-    </div>
+    </li>
   );
 };
 
@@ -184,26 +186,47 @@ const MobileNavDropdown: React.FC<
   return (
     <ul className="mt-4 dropdown-content menu rounded-md w-52 p-0 shadow-lg shadow-slate-950 bg-slate-800">
       {navItems.map((navItem, index) => (
-        <li key={index} className="">
-          <Link
-            onClick={onClickFunc}
-            href={navItem.route ? navItem.route : ""}
-            className={`hover:bg-slate-700 focus:bg-slate-700 rounded-none ${
-              // Add rounded corners to top and bottom of first and last items in groups between list bounds and sub-groups
-              index === 0
-                ? "rounded-t-md"
-                : index === navItems.length - 1
-                ? "rounded-b-md"
-                : navItem.subItems && navItem.subItems.length > 0
-                ? "rounded-b-md"
-                : navItems[index - 1].subItems &&
-                  navItems[index - 1].subItems!.length > 0
-                ? "rounded-t-md"
-                : ""
-            }`}
-          >
-            {navItem.title}
-          </Link>
+        <li key={index}>
+          { navItem.route ? (
+            <Link
+              onClick={onClickFunc}
+              href={navItem.route ? navItem.route : ""}
+              className={`hover:bg-slate-700 focus:bg-slate-700 rounded-none ${
+                // Add rounded corners to top and bottom of first and last items in groups between list bounds and sub-groups
+                index === 0
+                  ? "rounded-t-md"
+                  : index === navItems.length - 1
+                  ? "rounded-b-md"
+                  : navItem.subItems && navItem.subItems.length > 0
+                  ? "rounded-b-md"
+                  : navItems[index - 1].subItems &&
+                    navItems[index - 1].subItems!.length > 0
+                  ? "rounded-t-md"
+                  : ""
+              }`}
+            >
+              {navItem.title}
+            </Link>
+          ) : (
+            // Fall back to a div when no route is provided
+            <div
+              className={`hover:bg-slate-700 focus:bg-slate-700 rounded-none !cursor-default ${
+                // Add rounded corners to top and bottom of first and last items in groups between list bounds and sub-groups
+                index === 0
+                  ? "rounded-t-md"
+                  : index === navItems.length - 1
+                  ? "rounded-b-md"
+                  : navItem.subItems && navItem.subItems.length > 0
+                  ? "rounded-b-md"
+                  : navItems[index - 1].subItems &&
+                    navItems[index - 1].subItems!.length > 0
+                  ? "rounded-t-md"
+                  : ""
+              }`}
+            >
+              {navItem.title}
+            </div>
+          )}
           {navItem.subItems && navItem.subItems.length > 0 && (
             <ul>
               {navItem.subItems.map((subItem, subIndex) => (
@@ -257,6 +280,7 @@ const DropdownArrayIcon: React.FC = () => {
 const Hamburger: React.FC = () => {
   return (
     <label
+      title="Open Menu"
       tabIndex={0}
       role="button"
       className="hover:cursor-pointer hover:scale-[110%] pointer-events-auto"
