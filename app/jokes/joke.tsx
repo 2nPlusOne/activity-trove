@@ -3,12 +3,21 @@
 import React from "react";
 
 export default function Joke() {
+  const getStrictModeFromLocalStorage = () => {
+    const strictMode = localStorage.getItem("strict-mode");
+    if (strictMode === null) {
+      localStorage.setItem("strict-mode", "false");
+      return false;
+    }
+    return strictMode === "true";
+  };
+  
   const [joke, setJoke] = React.useState("");
   const [punchline, setPunchline] = React.useState("");
   const [showPunchline, setShowPunchline] = React.useState(false);
   const [loading, setLoading] = React.useState(true);
   const [punchlineDisabled, setPunchlineDisabled] = React.useState(false);
-  const [strictMode, setStrictMode] = React.useState(false);
+  const [strictMode, setStrictMode] = React.useState(getStrictModeFromLocalStorage());
   const fetchUrl = strictMode ? "/api/jokes/random?strict-mode" : "/api/jokes/random";
 
   const getJoke = async () => {
@@ -25,7 +34,6 @@ export default function Joke() {
   };
 
   React.useEffect(() => {
-    setStrictMode(localStorage.getItem("strict-mode") === "true");
     getJoke();
   }, []);
 
