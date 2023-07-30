@@ -10,8 +10,8 @@ export default function Riddles() {
   return (
     <>
       <div className="text-center flex flex-col items-center w-full max-w-xl">
-        <h1 className="text-3xl text-emerald-400">Riddles</h1>
-        <p className="italic text-gray-400">For minds that love a twisty tour, the sphinx awaits to test your lore.</p>
+        <h1 className="text-3xl text-emerald-400">{metadata.title as string}</h1>
+        <p className="italic text-gray-400">{metadata.description}</p>
         <Riddle />
       </div>
     </>
