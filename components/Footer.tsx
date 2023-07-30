@@ -31,11 +31,11 @@ const footerNavs: FooterNavItemProps[] = [
 
 const Footer: React.FC = () => {
   return (
-    <footer className="flex items-center justify-between w-full h-auto p-6 pb-6">
+    <footer className="flex items-center justify-between w-full h-auto p-3">
       <div className="w-12 h-12" /> {/* Empty div to balance left side */}
       <div className="flex items-center justify-center">
         Made with&nbsp;
-        <div className="hover:animate-heartBeat">  
+        <div className="hover:animate-heartBeat px-[1px]">  
           <svg className="w-4 h-4 fill-red-600" viewBox="0 0 16 16">
             <path fillRule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z"/>
           </svg>
@@ -67,8 +67,8 @@ const BuyMeACoffee: React.FC = () => {
       href="https://www.buymeacoffee.com/2nPlusOne"
       target="_blank"
       rel="noreferrer"
-      className="group flex flex-col items-center justify-center w-10 h-10 rounded-full
-        hover:scale-110 focus:scale-110 transition-all duration-200"
+      className="group flex flex-col items-center justify-center w-12 h-10 rounded-full
+        hover:scale-110 focus:scale-110 transition-all duration-200 py-0"
     >
       <div className="hover:animate-wiggle group-focus:animate-wiggle">  
           <svg className="w-6 h-6 stroke-[#ffdd00]" viewBox="0 0 24 24" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
