@@ -33,10 +33,10 @@ export default function Trivia() {
   
   return (
     <>
-      <div className="mt-8 flex flex-col justify-center items-center gap-y-2 p-4 w-full h-auto min-h-[435px] bg-slate-900 rounded-lg">
+      <div className="mt-8 flex flex-col justify-center items-center gap-y-2 p-4 w-full min-h-[500px] bg-slate-900 rounded-lg">
         {
           loading ? (
-            <span className="loading loading-spinner text-emerald-400 w-1/5" />
+            <span className="loading loading-dots text-emerald-400 w-1/12" />
           )
           : questions ? (
             <Quiz questions={questions} onFinish={onFinish} />

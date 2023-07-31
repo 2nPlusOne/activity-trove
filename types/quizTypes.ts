@@ -9,10 +9,11 @@ export interface Question {
 
 export interface QuestionProps {
   question: Question;
+  selectedAnswer: string;
   onAnswer: (answer: string) => void;
 }
 
 export interface QuizProps {
   questions: Question[];
-  onFinish: (answer: string) => void;
+  onFinish: () => void;
 }

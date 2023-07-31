@@ -20,6 +20,8 @@ export async function GET(request: NextRequest) {
   if (responseCode == 0) {
     questions = data.results.map((question: any) => {
       const answers = question.type == "boolean" ? ["True", "False"] : [...question.incorrect_answers, question.correct_answer];
+      // remove "Entertainment: ", etc from the category
+      question.category = question.category.replace(/^[a-zA-Z]+: /, "");
       return {
         category: question.category,
         type: question.type,
@@ -31,8 +33,8 @@ export async function GET(request: NextRequest) {
     });
   }
 
-  // wait for between one and two seconds for the loading spinner to show and delayed gratification to kick in
-  await new Promise((resolve) => setTimeout(resolve, Math.floor(Math.random() * 1000) + 1000));
+  // wait for between half and a second for the loading spinner to show and delayed gratification to kick in
+  await new Promise((resolve) => setTimeout(resolve, Math.floor(Math.random() * 500) + 500));
 
   return NextResponse.json({ responseCode, responseMessage, questions});
 }
