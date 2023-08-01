@@ -36,11 +36,11 @@ const QuestionComponent: React.FC<QuestionProps> = ({ question, selectedAnswer, 
     if (selectedAnswer !== null) {
       if (question.answers[index] === question.correctAnswer) {
         // return 'bg-emerald-400 text-slate-950 ring-emerald-200';
-        style += 'bg-emerald-400 text-slate-950 ring-emerald-200 ';
+        style += 'bg-emerald-400 text-slate-950 !ring-emerald-100 ';
       }
       else if (selectedAnswer === question.answers[index]) {
         // return 'bg-red-400 text-slate-950 ring-red-200';
-        style += 'bg-red-400 text-slate-950 ring-red-200 ';
+        style += 'bg-red-400 text-slate-950 !ring-red-200 ';
       }
       if (question.answers[index] === selectedAnswer) {
         style += 'ring-4'

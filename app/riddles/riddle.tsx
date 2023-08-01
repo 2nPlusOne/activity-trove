@@ -11,7 +11,7 @@ export default function Riddle() {
   const fetchUrl = "/api/riddles/random";
 
   const getRiddle = async () => {
-    setLoading(false); // set to true if we're loading from external API
+    setLoading(true);
     const response = await fetch(fetchUrl);
     const data = await response.json();
 

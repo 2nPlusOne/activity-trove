@@ -1,4 +1,6 @@
-import riddles from '../riddles.json'
+// This file is the nextjs 13 app router api route handler for /api/riddles/random
+
+import riddles from '@/app/_data/riddles.json';
 import { NextResponse } from 'next/server';
 
 export async function GET() {

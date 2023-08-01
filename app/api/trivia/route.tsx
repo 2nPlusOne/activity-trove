@@ -1,3 +1,5 @@
+// This file is the nextjs 13 app router api route handler for /api/trivia
+
 import { NextRequest, NextResponse } from "next/server";
 import { Question } from "@/types/quizTypes";
 import { shuffle } from "@/utils/utils";

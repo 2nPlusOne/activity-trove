@@ -21,7 +21,7 @@ export default function Joke() {
   const fetchUrl = strictMode ? "/api/jokes/random?strict-mode" : "/api/jokes/random";
 
   const getJoke = async () => {
-    setLoading(true); // set to true if we're loading from external API
+    setLoading(true);
     const response = await fetch(fetchUrl);
     const data = await response.json();
 

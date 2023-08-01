@@ -28,7 +28,7 @@ const TriviaConfigForm: React.FC<TriviaConfigFormProps> = ({
             name="numQuestions"
             type="number"
             min={1}
-            max={10}
+            max={50}
             className="bg-slate-100 text-slate-700 rounded-md focus:border-emerald-400 w-2/3 mx-8"
             value={triviaConfig.numQuestions}
             onChange={(e) =>
