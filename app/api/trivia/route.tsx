@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import { Question } from "@/types/quizTypes";
 import { shuffle } from "@/utils/utils";
-import { OpenTDBResponse, ResponseCodeMap, ResponseCodeEnum } from "../../../types/openTdbTypes";
+import { OpenTDBResponse, ResponseCodeMap, ResponseCodeEnum } from "@/types/openTdbTypes";
 
 export async function GET(request: NextRequest) {
   const { searchParams } = new URL(request.nextUrl);
@@ -12,8 +12,9 @@ export async function GET(request: NextRequest) {
 
   // fetch the trivia data
   const data: OpenTDBResponse = await fetch(`https://opentdb.com/api.php?amount=${amount}${category ? `&category=${category}` : ""}${difficulty ? `&difficulty=${difficulty}` : ""}${type ? `&type=${type}` : ""}`).then((res) => res.json());
-  const responseCode = data.response_code as ResponseCodeEnum;
   
+  // initialize response variables
+  const responseCode = data.response_code as ResponseCodeEnum;
   const responseMessage = ResponseCodeMap.get(responseCode);
   let questions: Question[] = [];
 
