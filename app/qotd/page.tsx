@@ -3,7 +3,7 @@ import QuestionOfTheDay from "./questionOfTheDay"
 
 export const metadata: Metadata = {
   title: 'Question of the Day',
-  description: 'A daily question to kindle the mind, fueling discussions, one of a kind.',
+  description: 'A daily question to kindle the mind, sparking discussions, one of a kind.',
 }
 
 export default function QotD() {
