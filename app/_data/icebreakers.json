@@ -1,0 +1,20 @@
+[
+  {
+    "title": "Example A",
+    "ages": "All Ages",
+    "participants": "3+",
+    "description": "This is an example icebreaker."
+  },
+  {
+    "title": "Example B",
+    "ages": "13+",
+    "participants": "2+",
+    "description": "This is another example icebreaker."
+  },
+  {
+    "title": "Example C",
+    "ages": "7-12",
+    "participants": "2+",
+    "description": "This is yet another example icebreaker."
+  }
+]

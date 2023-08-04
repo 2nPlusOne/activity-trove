@@ -23,8 +23,6 @@ export default function QuestionOfTheDay() {
   return (
     <>
       <div className="flex flex-col items-center mt-8 w-auto">
-        <div className="flex items-center text-center">
-        </div>
         <div className="w-full p-4 m-2 bg-slate-800 text-white border-2 border-emerald-400 rounded-md shadow-lg transition-all">
           <p className="text-lg w-full">{loading ? "Loading question..." : question}</p>
         </div>
