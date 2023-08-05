@@ -12,7 +12,8 @@ export default function Riddle() {
 
   const getRiddle = async () => {
     setLoading(true);
-    const response = await fetch(fetchUrl);
+    // fetch the riddle from the api with caching disabled
+    const response = await fetch(fetchUrl, { cache: "no-store" });
     const data = await response.json();
     console.log(data);
 
