@@ -14,6 +14,7 @@ export default function Riddle() {
     setLoading(true);
     const response = await fetch(fetchUrl);
     const data = await response.json();
+    console.log(data);
 
     setRiddle(data.riddle);
     setAnswer(data.answer);
