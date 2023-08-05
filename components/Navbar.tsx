@@ -2,7 +2,9 @@
 
 import { Url } from "next/dist/shared/lib/router/router";
 import Link from "next/link";
+import Image from "next/image";
 import React from "react";
+
 
 interface NavItemProps {
   title: string;
@@ -74,7 +76,7 @@ const Navbar: React.FC = () => {
           className="flex flex-row items-center justify-center group focus:outline-offset-8 rounded-md  "
         >
           <div className="group-hover:scale-110 group-focus:scale-110 transition-all">
-            <img
+            <Image
               src="noto-dragon.svg"
               className="group-hover:animate-wiggle group-focus:animate-wiggle"
               alt="Logo"
