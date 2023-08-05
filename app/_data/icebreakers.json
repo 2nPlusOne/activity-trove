@@ -1,20 +1,128 @@
 [
   {
-    "title": "Example A",
-    "ages": "All Ages",
+    "title": "Word Association",
+    "ages": "All",
+    "participants": "2+",
+    "description": "If virtual, first decide an order for participants to go in. The first person says a word, and the next person says the first three words that pop into their head when hearing the word. The next person says three words based on the last word of the previous participant, and so on until everyone has gone. You can then compare the first and last words for fun! For example, if the first person says 'dog', the next person could say 'cat, feline, pet'. The next person could say 'dog, bark, loud', and so on. If in a two-person group, you can take turns saying words and responding to each other's words."
+  },
+  {
+    "title": "Pictionary",
+    "ages": "All",
+    "participants": "2+",
+    "description": "Pictionary is a classic icebreaker that can be played in many formats! If on Zoom, you can simply use the whiteboard feature. The game is commonly played by having one person pick a random word and draw it for the group to see. The other participants then try to guess what the word is. The first person to guess gets a point. There are many online variations of the game, but two popular options are gartic.io and drawasaurus.org. Skribbl.io is also an option, though the ads can be distracting. Google quickdraw is a fun option as well (an AI guesses your drawing), though it is not multiplayer."
+  },
+  {
+    "title": "Two Truths and a Lie",
+    "ages": "All",
+    "participants": "2+",
+    "description": "This is a classic icebreaker that can be played in many formats! The game is commonly played by having one person share three statements about themselves, two of which are true and one of which is a lie. The other participants then try to guess which statement is the lie. The first person to guess correctly gets a point."
+  },
+  {
+    "title": "Read My Lips",
+    "ages": "All",
     "participants": "3+",
-    "description": "This is an example icebreaker."
+    "description": "For this icebreaker, you will need to be able to see each other's faces. One person will mute their microphone and say a word or phrase, and the other participants will try to guess what they are saying by reading their lips. The muted participant will continue to say the word or phrase until someone guesses correctly, or the host decides to move on."
   },
   {
-    "title": "Example B",
-    "ages": "13+",
-    "participants": "2+",
-    "description": "This is another example icebreaker."
+    "title": "Rock Paper Scissor Tournament",
+    "ages": "All",
+    "participants": "4+",
+    "description": "Break up the group into pairs. Each pair will play rock paper scissors, and the winner will move on to the next round. Continue until there is one winner."
   },
   {
-    "title": "Example C",
-    "ages": "7-12",
+    "title": "Interesting Ingredients",
+    "ages": "All",
     "participants": "2+",
-    "description": "This is yet another example icebreaker."
+    "description": "Have a participant think of a dish, and list 2-3 of its ingredients. The other participants will then try to guess what the dish is. A variant of this activity would involve having one person list 2-3 random ingredients, and having other participants try to come up with a dish that uses those ingredients. For another variant, you could have one person name a single ingredient, and have the other participants name their favorite dish that uses that ingredient."
+  },
+  {
+    "title": "Charades",
+    "ages": "All",
+    "participants": "2+",
+    "description": "Charades is a classic game where a player acts out a word or phrase without speaking, and other participants guess what it is. You can use traditional categories like movies, books, or songs, or you can come up with your own categories based on your group's interests. If you're playing virtually, the person acting out the word or phrase can do so in front of their webcam."
+  },
+  {
+    "title": "Scavenger Hunt",
+    "ages": "All",
+    "participants": "2+",
+    "description": "Create a list of common household items. Participants have a set amount of time to find as many items on the list as they can. The one who finds the most items wins!"
+  },
+  {
+    "title": "Desert Island",
+    "ages": "All",
+    "participants": "2+",
+    "description": "Each participant says what three items they would bring if they were going to be stuck on a desert island and why. This can lead to some interesting answers!"
+  },
+  {
+    "title": "Story Round Robin",
+    "ages": "All",
+    "participants": "3+",
+    "description": "One person starts a story with a sentence, then the next person adds a sentence, and so on. The story can go in unexpected directions as everyone contributes!"
+  },
+  {
+    "title": "Show and Tell",
+    "ages": "7-10",
+    "participants": "2+",
+    "description": "Each participant chooses an object in their home to share and talks about why it's important to them."
+  },
+  {
+    "title": "Emoji Faces Challenge",
+    "ages": "7-10",
+    "participants": "3+",
+    "description": "Choose a variety of emojis with different expressions. Participants take turns mimicking the emoji faces on their screens. The aim is to try and make the other participants laugh, or simply to see who can make the most accurate emoji face!"
+  },
+  {
+    "title": "Drawing Contest",
+    "ages": "7-10",
+    "participants": "2+",
+    "description": "Choose a theme and have a timed drawing contest. Everyone shares their drawing with the group at the end!"
+  },
+  {
+    "title": "Simon Says",
+    "ages": "7-10",
+    "participants": "3+",
+    "description": "Play a game of Simon Says, ensuring the commands are suitable for the space each participant is in."
+  },
+  {
+    "title": "Mad Libs",
+    "ages": "11-14",
+    "participants": "2+",
+    "description": "Play a game of Mad Libs. One person asks the others for a list of words (e.g., adjective, noun, etc.) to fill in the blanks of a story, without revealing the story. They then read the story with the words filled in for a hilarious effect!"
+  },
+  {
+    "title": "Who Am I?",
+    "ages": "11-14",
+    "participants": "3+",
+    "description": "One person thinks of a celebrity, character, or other well-known person. The others take turns asking yes-or-no questions until someone guesses correctly."
+  },
+  {
+    "title": "20 Questions",
+    "ages": "7-17",
+    "participants": "2+",
+    "description": "One participant thinks of something, and the others have up to 20 yes-or-no questions to figure out what it is."
+  },
+  {
+    "title": "The Alphabet Game",
+    "ages": "7-17",
+    "participants": "2+",
+    "description": "Participants go around in a circle and must name something that fits a chosen category (like 'animals', 'fruits', etc.) starting with each letter of the alphabet."
+  },
+  {
+    "title": "Memory Game",
+    "ages": "7-17",
+    "participants": "2+",
+    "description": "One person starts by saying 'I'm going on a picnic and I'm bringing...' followed by an item that starts with the letter A. The next person repeats the phrase and adds an item that starts with the letter B, and so on. If someone forgets an item, they are out of the game. The last person left wins!"
+  },
+  {
+    "title": "Count to Twenty",
+    "ages": "7-17",
+    "participants": "4+",
+    "description": "One person starts by saying 'one', then the next person says 'two', and so on. The aim is to count to 20 without two people saying the same number at the same time. If this happens, the group has to start over! The larger the group, the more challenging this game becomes."
+  },
+  {
+    "title": "Draw Together",
+    "ages": "All",
+    "participants": "3+",
+    "description": "Let's design a character together! This is a fun and creative group activity where everyone contributes. To start, someone doodles a simple shape or outline on a shared online whiteboard. Then, each person takes turns adding a little something to our character - a pair of shoes, a funky hat, a cool hairstyle, you name it. This continues until everyone is happy with the end result. It's a great way to see how all our different ideas can come together into one very unique character."
   }
 ]
