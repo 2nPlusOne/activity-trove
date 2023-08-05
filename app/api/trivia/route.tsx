@@ -5,6 +5,9 @@ import { Question } from "@/types/quizTypes";
 import { shuffle } from "@/utils/utils";
 import { OpenTDBResponse, ResponseCodeMap, ResponseCodeEnum } from "@/types/openTdbTypes";
 
+// Route segment options
+export const dynamic = 'force-dynamic'
+
 export async function GET(request: NextRequest) {
   const { searchParams } = new URL(request.nextUrl);
   const amount = searchParams.get("amount");

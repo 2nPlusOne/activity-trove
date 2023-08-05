@@ -8,6 +8,9 @@ interface Joke {
   punchline: string;
 }
 
+// Route segment options
+export const dynamic = 'force-dynamic'
+
 export async function GET(request: NextRequest) {
   const { searchParams } = new URL(request.nextUrl);
   let data: Joke;
