@@ -21,17 +21,14 @@ const navItems: NavItemProps[] = [
   {
     title: "😂 /jokes",
     route: "/jokes",
-    icon: "😂",
   },
   {
     title: "🕵️ /riddles",
     route: "/riddles",
-    icon: "🕵️",
   },
   {
     title: "🧠 /trivia",
     route: "/trivia",
-    icon: "🧠",
   },
   {
     title: "➡️ /more",
@@ -39,17 +36,14 @@ const navItems: NavItemProps[] = [
       {
         title: "🧊 /icebreakers",
         route: "/icebreakers",
-        icon: "🧊",
       },
       {
         title: "❓ /qotd",
         route: "/qotd",
-        icon: "❓",
       },
       {
         title: "🌐 /resources",
         route: "/resources",
-        icon: "🌐",
       },
     ],
   },
@@ -63,12 +57,12 @@ const Navbar: React.FC = () => {
   return (
     <nav
       id="navbar"
-      className="sticky top-0 z-50 flex items-center justify-center"
+      className="sticky top-0 z-50 flex items-center justify-center bg-slate-900 bg-opacity-80 filter backdrop-blur-sm"
     >
       <div
         id="nav-content"
         className="flex flex-row flex-nowrap justify-between text-center items-center 
-        w-full h-auto px-8 lg:px-24 xl:px-40 py-4"
+        w-full h-auto px-8 lg:px-24 xl:px-40 py-2"
       >
         <Link
           onClick={blurOnClick}
