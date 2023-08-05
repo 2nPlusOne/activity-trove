@@ -8,7 +8,7 @@ export default function QuestionOfTheDay() {
   const fetchUrl = "/api/qotd/random";
 
   const getQuestion = async () => {
-    setLoading(false); // set to true if we're loading from external API
+    setLoading(true);
     const response = await fetch(fetchUrl);
     const data = await response.json();
 
