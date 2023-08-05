@@ -14,6 +14,9 @@ module.exports = {
   },
   theme: {
     extend: {
+      transitionProperty: {
+        'height': 'height',
+      },
       keyframes: {
         wiggle: {
           '0%': { transform: 'rotate(0deg)' },
