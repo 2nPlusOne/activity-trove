@@ -115,9 +115,3 @@ export const defaultTriviaConfig: TriviaConfigState = {
   difficulty: TriviaDifficultyEnum.Easy,
   type: TriviaTypeEnum.Any
 };
-
-export interface TriviaConfigFormProps {
-  triviaConfig: TriviaConfigState;
-  setTriviaConfig: React.Dispatch<React.SetStateAction<TriviaConfigState>>;
-  generateTrivia: (e: React.FormEvent<HTMLButtonElement>) => void;
-}

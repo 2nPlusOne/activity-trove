@@ -2,7 +2,7 @@
 
 import React from "react";
 import {
-  TriviaConfigFormProps,
+  TriviaConfigState,
   triviaCategories,
   triviaTypesMap,
   TriviaTypeEnum,
@@ -10,6 +10,12 @@ import {
   triviaDifficultiesMap,
   TriviaCategoryEnum,
 } from "../../types/triviaTypes";
+
+export interface TriviaConfigFormProps {
+  triviaConfig: TriviaConfigState;
+  setTriviaConfig: React.Dispatch<React.SetStateAction<TriviaConfigState>>;
+  generateTrivia: (e: React.FormEvent<HTMLButtonElement>) => void;
+}
 
 const TriviaConfigForm: React.FC<TriviaConfigFormProps> = ({
   triviaConfig,
@@ -102,13 +108,13 @@ const TriviaConfigForm: React.FC<TriviaConfigFormProps> = ({
             ))}
           </select>
         </div>
-        <button
-          className="font-semibold p-4 mt-4 border-2 border-emerald-400 text-emerald-400 rounded-md bg-slate-800 hover:bg-emerald-400 hover:text-slate-800 transition-all"
-          onClick={generateTrivia}
-        >
-          Generate Trivia Questions!
-        </button>
       </form>
+      <button
+        className="font-semibold p-4 border-2 border-emerald-400 text-emerald-400 rounded-md bg-slate-800 hover:bg-emerald-400 hover:text-slate-800 transition-all"
+        onClick={generateTrivia}
+      >
+        Generate Trivia Questions!
+      </button>
     </>
   );
 };

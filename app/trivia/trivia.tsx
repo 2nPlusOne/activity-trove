@@ -33,7 +33,7 @@ export default function Trivia() {
   
   return (
     <>
-      <div className="mt-8 flex flex-col justify-center items-center gap-y-2 p-4 w-full min-h-[500px] bg-slate-900 rounded-2xl">
+      <div className="mt-8 gap-y-6 flex flex-col justify-center items-center p-4 w-full min-h-[500px] bg-slate-900 rounded-2xl">
         {
           loading ? (
             <span className="loading loading-dots text-emerald-400 w-1/12" />
