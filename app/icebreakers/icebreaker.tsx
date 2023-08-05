@@ -15,9 +15,9 @@ const Icebreaker: React.FC<IcebreakerProps> = ({
 }) => {
   return (
     <>
-      <div className="flex flex-col justify-center items-center p-4 w-full bg-slate-900 rounded-lg">
+      <div className="flex flex-col justify-center items-center p-4 w-full bg-slate-900 rounded-lg ring-2 ring-emerald-400">
         <h1 className="text-xl text-emerald-400">{title}</h1>
-        <div className='flex flex-row justify-center gap-2 py-1'>
+        <div className='flex flex-row justify-center gap-2 pt-1 pb-4'>
           <div className='inline-block whitespace-nowrap rounded-full bg-sky-400 text-slate-950 text-xs font-semibold px-2 py-1 text-center align-baseline leading-none'>
             {ages}
           </div>

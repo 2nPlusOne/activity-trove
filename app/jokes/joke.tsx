@@ -48,7 +48,7 @@ export default function Joke() {
 
   return (
     <>
-      <div className="flex flex-col items-center mt-8 w-auto">
+      <div className="flex flex-col items-center min-h-[300px] mt-8 w-full">
         <div className="flex items-center">
           <label htmlFor="strict-mode" className="text-emerald-400 pr-2">
             Strict Mode
@@ -88,31 +88,37 @@ export default function Joke() {
             </div>
           </div>
         </div>
-        <div className="w-full p-4 m-2 bg-slate-800 text-white border-2 border-emerald-400 rounded-md shadow-lg transition-all">
-          <p className="text-lg w-full flex flex-row items-center justify-center">{loading ? "Loading joke..." : joke }</p>
-          {showPunchline && (
-            <p className="text-lg text-emerald-400 pt-2">
-              {loading ? "" : punchline}
+        <div className="flex flex-col justify-between w-full h-[11.5rem] items-center align-middle mt-2">
+          <div className="w-full p-4 m-2 bg-slate-800 text-white border-2 border-emerald-400 rounded-md shadow-lg transition-all">
+            <p className="text-lg w-full flex flex-row items-center justify-center">
+              {loading ? "Loading joke..." : joke }
             </p>
-          )}
-        </div>
+            {
+              // only render if showPunchline is true and loading is false
+              showPunchline && !loading &&
+              <p className="text-lg text-emerald-400 pt-2">
+                { punchline }
+              </p>
+            }
+          </div>
 
-        <div className="flex gap-2">
-          <button
-            className={`font-semibold p-4 border-2 border-emerald-400 text-emerald-400 rounded-md bg-slate-800 hover:bg-emerald-400 hover:text-slate-800 transition-all ${
-              punchlineDisabled ? "opacity-50 cursor-not-allowed" : ""
-            }`}
-            onClick={revealPunchline}
-            disabled={punchlineDisabled}
-          >
-            Reveal Punchline
-          </button>
-          <button
-            className="font-semibold p-4 border-2 border-emerald-400 text-emerald-400 rounded-md bg-slate-800 hover:bg-emerald-400 hover:text-slate-800 transition-all"
-            onClick={getJoke}
-          >
-            New Joke
-          </button>
+          <div className="flex gap-4">
+            <button
+              className={`font-semibold p-4 border-2 border-emerald-400 text-emerald-400 rounded-md bg-slate-800 enabled:hover:bg-emerald-400 enabled:hover:text-slate-800 transition-all ${
+                punchlineDisabled ? "opacity-50 cursor-auto" : ""
+              }`}
+              onClick={revealPunchline}
+              disabled={punchlineDisabled}
+            >
+              Reveal Punchline
+            </button>
+            <button
+              className="font-semibold p-4 border-2 border-emerald-400 text-emerald-400 rounded-md bg-slate-800 hover:bg-emerald-400 hover:text-slate-800 transition-all"
+              onClick={getJoke}
+            >
+              New Joke
+            </button>
+          </div>
         </div>
       </div>
     </>
