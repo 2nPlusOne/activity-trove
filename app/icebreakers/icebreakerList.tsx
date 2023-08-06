@@ -72,6 +72,7 @@ const IcebreakerList: React.FC = () => {
 
           <input
             id="icebreaker-search"
+            aria-label="Search by title or description"
             type="text"
             value={searchTerm}
             onChange={handleSearchChange}
@@ -82,6 +83,7 @@ const IcebreakerList: React.FC = () => {
           <button
             id="icebreaker-clear-btn"
             title="Clear search"
+            aria-label="Clear search"
             onClick={() => setSearchTerm("")}
             className="absolute inset-y-0 right-0 px-2 flex items-center"
           >
@@ -92,6 +94,7 @@ const IcebreakerList: React.FC = () => {
         <button
           id="icebreaker-random-btn"
           title="Select a random icebreaker"
+          aria-label="Select a random icebreaker"
           onClick={handleSelectRandom}
           className="btn btn-square bg-transparent border-none text-emerald-400 bg-slate-900 hover:bg-slate-800"
         >

@@ -43,6 +43,9 @@ const Icebreaker: React.FC<IcebreakerProps> = ({
         onClick={handleButtonClick}
         className="flex flex-row w-full justify-between items-center gap-2 py-2 px-3 focus:outline-none"
         aria-expanded={isActive}
+        aria-controls={`icebreaker-${id}`}
+        aria-label="Toggle icebreaker description"
+        aria-labelledby={`icebreaker-${id}`}
       >
         <h1 className="text-xl text-emerald-400">{title}</h1>
         <div className='flex flex-row justify-center gap-2 items-center'>
