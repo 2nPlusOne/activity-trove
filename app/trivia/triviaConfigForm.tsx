@@ -24,6 +24,7 @@ const TriviaConfigForm: React.FC<TriviaConfigFormProps> = ({
 }) => {
   return (
     <>
+      {/* TODO: add session token controls and localStorage persistence */}
       <h2 className="text-xl text-emerald-400">Configure a Question Set</h2>
       <form className="flex flex-col justify-center items-center w-full h-full gap-y-2">
         {/* a form with a select for the number of questions, category, difficulty, and type */}
