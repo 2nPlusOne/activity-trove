@@ -26,9 +26,9 @@ const QuestionComponent: React.FC<QuestionProps> = ({ question, selectedAnswer, 
   type DifficultyWithoutAny = Exclude<TriviaDifficultyEnum, TriviaDifficultyEnum.Any>;
 
   const difficultyColorMap: Record<DifficultyWithoutAny, string> = {
-    [TriviaDifficultyEnum.Easy]: 'success',
-    [TriviaDifficultyEnum.Medium]: 'warning',
-    [TriviaDifficultyEnum.Hard]: 'error',
+    [TriviaDifficultyEnum.Easy]: 'bg-emerald-400 text-slate-900',
+    [TriviaDifficultyEnum.Medium]: 'bg-yellow-400 text-slate-900',
+    [TriviaDifficultyEnum.Hard]: 'bg-red-400 text-slate-900',
   };
 
   const getAnswerStyle = (index: number) => {
@@ -51,15 +51,14 @@ const QuestionComponent: React.FC<QuestionProps> = ({ question, selectedAnswer, 
     }
   };
 
-  // The render function
   return (
     <>
       <div className='flex flex-col text-center items-center gap-2 bg-slate-800 w-full px-3 py-3 rounded-md drop-shadow-lg'>
         <div className='flex flex-row justify-center gap-4 '>
-          <div className='badge badge-info text-xs font-semibold'>
+          <div className='badge badge-info text-xs !text-slate-900 font-semibold'>
             {question.category}
           </div>
-          <div className={`badge badge-${difficultyColorMap[question.difficulty as DifficultyWithoutAny]} text-xs font-semibold`}>
+          <div className={`badge ${difficultyColorMap[question.difficulty as DifficultyWithoutAny]} text-xs font-semibold`}>
             {toTitleCase(question.difficulty)}
           </div>
         </div>
