@@ -36,10 +36,28 @@
     "description": "Have a participant think of a dish, and list 2-3 of its ingredients. The other participants will then try to guess what the dish is. A variant of this activity would involve having one person list 2-3 random ingredients, and having other participants try to come up with a dish that uses those ingredients. For another variant, you could have one person name a single ingredient, and have the other participants name their favorite dish that uses that ingredient."
   },
   {
+    "title": "Rhyme Time",
+    "ages": "All",
+    "participants": "2+",
+    "description": "Start with a chosen word. The next participant must say a word that rhymes with the previous one. The chain continues until someone can't think of a rhyming word. For added difficulty, set themes or categories like 'fruits' or 'animals'."
+  },
+  {
+    "title": "Last Letter Link",
+    "ages": "All",
+    "participants": "3+",
+    "description": "The first participant says a word. The next person must say a word that starts with the last letter of the previous word. For instance, if the word is 'apple', the next word could be 'elephant'. The chain continues until someone is stumped!"
+  },
+  {
+    "title": "Rose, Bud, Thorn",
+    "ages": "All",
+    "participants": "2+",
+    "description": "A reflective activity where participants share their 'Rose' (a positive or highlight from their day or week), their 'Bud' (something they're looking forward to or hopeful about), and their 'Thorn' (a challenge they faced or are facing). It's a great way to get insights into each other's experiences and feelings."
+  },
+  {
     "title": "Charades",
     "ages": "All",
     "participants": "2+",
-    "description": "Charades is a classic game where a player acts out a word or phrase without speaking, and other participants guess what it is. You can use traditional categories like movies, books, or songs, or you can come up with your own categories based on your group's interests. If you're playing virtually, the person acting out the word or phrase can do so in front of their webcam."
+    "description": "Charades is a classic game where a player acts out a word or phrase without speaking, and other participants guess what it is. You can use traditional categories like movies, books, or songs, or you can come up with categories based on your group's interests. If you're playing virtually, the person acting out the word or phrase can do so in front of their webcam."
   },
   {
     "title": "Scavenger Hunt",
@@ -72,10 +90,10 @@
     "description": "Choose a variety of emojis with different expressions. Participants take turns mimicking the emoji faces on their screens. The aim is to try and make the other participants laugh, or simply to see who can make the most accurate emoji face!"
   },
   {
-    "title": "Drawing Contest",
+    "title": "Quick Sketch",
     "ages": "7-10",
     "participants": "2+",
-    "description": "Choose a theme and have a timed drawing contest. Everyone shares their drawing with the group at the end!"
+    "description": "Choose a theme (like 'aliens' or 'dream vacation') and give participants 2-3 minutes to create a sketch based on the theme. Afterward, everyone shares their drawing with the group!"
   },
   {
     "title": "Simon Says",
@@ -124,5 +142,35 @@
     "ages": "All",
     "participants": "3+",
     "description": "Let's design a character together! This is a fun and creative group activity where everyone contributes. To start, someone doodles a simple shape or outline on a shared online whiteboard. Then, each person takes turns adding a little something to our character - a pair of shoes, a funky hat, a cool hairstyle, you name it. This continues until everyone is happy with the end result. It's a great way to see how all our different ideas can come together into one very unique character."
+  },
+  {
+    "title": "Virtual Background Challenge",
+    "ages": "All",
+    "participants": "3+",
+    "description": "Ask everyone to change their virtual background to something that represents their current mood or something they like. Then each person briefly explains their choice."
+  },
+  {
+    "title": "Fact Share",
+    "ages": "All",
+    "participants": "2+",
+    "description": "Ask everyone to share a quick, fun fact about themselves. It can be a hobby, a quirky talent, or something they recently learned about themselves."
+  },
+  {
+    "title": "Zoom In Game",
+    "ages": "7-17",
+    "participants": "3+",
+    "description": "Show a zoomed-in image of a common object or picture, and participants have to guess what it is. As time goes by, zoom out little by little until someone correctly identifies it."
+  },
+  {
+    "title": "Emoji Story",
+    "ages": "11-17",
+    "participants": "2+",
+    "description": "Start a story using 3-4 emojis. Participants must continue the story by adding more emojis, and by the end, the group will have a unique and likely humorous 'emoji story'."
+  },
+  {
+    "title": "Virtual Pet Parade",
+    "ages": "All",
+    "participants": "2+",
+    "description": "Participants who have pets can briefly show and introduce their pets to the group. It's a fun and often adorable way to break the ice."
   }
 ]

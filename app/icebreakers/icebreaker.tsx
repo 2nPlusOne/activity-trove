@@ -37,7 +37,7 @@ const Icebreaker: React.FC<IcebreakerProps> = ({
     <div
       className="flex flex-col justify-between w-full items-center 
       bg-slate-900 rounded-lg ring-2 ring-emerald-400 transition-all duration-200 
-      focus-within:ring-2 focus-within:ring-emerald-200"
+      focus-within:ring-4 focus-within:ring-emerald-100"
     >
       <button
         onClick={handleButtonClick}
