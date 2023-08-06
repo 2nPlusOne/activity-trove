@@ -20,7 +20,6 @@ const IcebreakerList: React.FC = () => {
   const [active, setActive] = useState(-1);
   const [searchTerm, setSearchTerm] = useState("");
   const prevFilteredResultsRef = useRef<Icebreaker[]>([]);
-  const [isRandomSelected, setIsRandomSelected] = useState(false);
 
   const filteredResults = icebreakers.filter((activity) => {
     return (
@@ -45,19 +44,20 @@ const IcebreakerList: React.FC = () => {
   };
 
   const handleSelectRandom = () => {
-    const randomActivityIndex = Math.floor(Math.random() * icebreakers.length);
-    const randomActivityTitle = icebreakers[randomActivityIndex].title;
+    const randomActivity = Math.floor(Math.random() * icebreakers.length);
+    // update search term to be the title of the random activity
+    setSearchTerm(icebreakers[randomActivity].title);
 
-    setSearchTerm(randomActivityTitle);
-    setIsRandomSelected(true);  // Indicate that a random icebreaker was selected
-  };
-
-  useEffect(() => {
-    if (isRandomSelected) {
-        setActive(0);  // Activate the first icebreaker in the updated filtered list
-        setIsRandomSelected(false);  // Reset the flag
-    }
-  }, [searchTerm]);
+    // Wait a small duration for the search term to update before setting active
+    // This is to ensure that the view is re-rendered with the new search term before setting active.
+    // One alternative is to use a useRef to store a boolean value that is set to true when the search
+    // term is updated, and then set active in a useEffect that watches for that boolean value to change.
+    // However, this is a bit more complicated and requires more code.
+    setTimeout(() => {
+      // set active to the random activity (which should be the first in the list)
+      setActive(0);
+    }, 20);
+  }
 
   return (
     <div className="flex flex-col w-full items-center mt-8 gap-4">
@@ -66,7 +66,7 @@ const IcebreakerList: React.FC = () => {
         className="flex flex-row w-full justify-center items-center gap-2"
       >
         <div className="relative w-full max-w-xs bg-slate-800 text-slate-200 rounded-md border-2 border-emerald-400 focus-within:border-emerald-400 focus-within:ring-1 focus-within:ring-emerald-200">
-          <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+          <div className="absolute inset-y-0 left-0 pl-2 flex items-center pointer-events-none">
             <SearchIcon />
           </div>
 
@@ -76,11 +76,12 @@ const IcebreakerList: React.FC = () => {
             value={searchTerm}
             onChange={handleSearchChange}
             placeholder="Search by title or description"
-            className="px-12 block w-full focus:ring-0 border-none bg-transparent"
+            className="px-9 block w-full focus:ring-0 border-none bg-transparent"
           />
 
           <button
             id="icebreaker-clear-btn"
+            title="Clear search"
             onClick={() => setSearchTerm("")}
             className="absolute inset-y-0 right-0 px-2 flex items-center"
           >
@@ -90,6 +91,7 @@ const IcebreakerList: React.FC = () => {
 
         <button
           id="icebreaker-random-btn"
+          title="Select a random icebreaker"
           onClick={handleSelectRandom}
           className="btn btn-square bg-transparent border-none text-emerald-400 bg-slate-900 hover:bg-slate-800"
         >
@@ -118,8 +120,8 @@ const SearchIcon = () => {
     <svg
       className=" stroke-slate-400"
       xmlns="http://www.w3.org/2000/svg"
-      width="24"
-      height="24"
+      width="20"
+      height="20"
       viewBox="0 0 24 24"
       fill="none"
       strokeWidth="2"
