@@ -40,7 +40,7 @@ const navItems: NavItemProps[] = [
 
 const Navbar: React.FC = () => {
   const blurOnClick = (e: React.MouseEvent) => {
-    // (e.currentTarget as HTMLElement).blur();
+    (e.currentTarget as HTMLElement).blur();
   };
 
   return (
