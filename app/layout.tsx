@@ -1,6 +1,7 @@
 import "./globals.scss";
 import "../inter-font/inter.css";
 import type { Metadata } from "next";
+import { Analytics } from '@vercel/analytics/react';
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
@@ -24,6 +25,7 @@ export default function RootLayout({
         <Navbar />
         <main className="flex flex-col grow items-center p-2 md:p-4 lg:p-6 xl:p-8">
           {children}
+          <Analytics />
         </main>
         <Footer />
       </body>
