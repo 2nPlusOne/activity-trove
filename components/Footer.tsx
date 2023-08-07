@@ -32,11 +32,11 @@ const Footer: React.FC = () => {
 const GitHub: React.FC = () => {
   return (
     <a
-      title="GitHub"
+      title="GitHub Repository"
       href="https://github.com/2nPlusOne/activity-center"
       target="_blank"
       rel="noreferrer"
-      className="group flex flex-col items-center justify-center w-12 h-10 rounded-full
+      className="group flex flex-col items-center justify-center w-10 h-10 rounded-full
         hover:scale-110 focus:scale-110 transition-all duration-200 py-0"
     >
       <div className="hover:animate-wiggle group-focus:animate-wiggle">
@@ -55,7 +55,7 @@ const BuyMeACoffee: React.FC = () => {
       href="https://www.buymeacoffee.com/2nPlusOne"
       target="_blank"
       rel="noreferrer"
-      className="group flex flex-col items-center justify-center w-12 h-10 rounded-full
+      className="group flex flex-col items-center justify-center w-10 h-10 rounded-full
         hover:scale-110 focus:scale-110 transition-all duration-200 py-0"
     >
       <div className="hover:animate-wiggle group-focus:animate-wiggle">  

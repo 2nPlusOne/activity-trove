@@ -58,7 +58,7 @@ const Icebreaker: React.FC<IcebreakerProps> = ({
           <ChevronDown active={isActive} />
         </div>
       </button>
-      <div style={{ maxHeight: `${maxHeight}` }} className="overflow-hidden transition-max-height duration-700 ease-in-out" ref={ref}>
+      <div style={{ maxHeight: `${maxHeight}` }} className="overflow-hidden transition-max-height duration-500 ease-in-out" ref={ref}>
         <p className="text-gray-400 p-4">{description}</p>
       </div>
     </div>
