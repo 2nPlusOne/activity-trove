@@ -68,11 +68,11 @@ const Navbar: React.FC = () => {
             />
           </div>
           <h1
-            data-label="activity center"
+            data-label="activity trove"
             className="bold-pseudo text-2xl pl-4 transition-all 
             group-hover:translate-x-2 group-hover:font-semibold group-hover:text-emerald-400"
           >
-            activity center
+            activity trove
           </h1>
         </Link>
         <div className="hidden md:block md:visible">

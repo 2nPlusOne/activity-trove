@@ -33,7 +33,7 @@ const GitHub: React.FC = () => {
   return (
     <a
       title="GitHub Repository"
-      href="https://github.com/2nPlusOne/activity-center"
+      href="https://github.com/2nPlusOne/activity-trove"
       target="_blank"
       rel="noreferrer"
       className="group flex flex-col items-center justify-center w-10 h-10 rounded-full
