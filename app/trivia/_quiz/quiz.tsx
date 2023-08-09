@@ -1,31 +1,30 @@
-// quiz.tsx
-
 "use client";
 
-import React from "react";
+import { useState, useEffect, useRef, createRef } from "react";
+
 import { QuizProps } from "../../../types/quizTypes";
 import QuestionComponent from "./question";
 
 const Quiz: React.FC<QuizProps> = ({ questions, onFinish }) => {
-  const [currentQuestion, setCurrentQuestion] = React.useState(0);
-  const [selectedAnswers, setSelectedAnswers] = React.useState<string[]>(
+  const [currentQuestion, setCurrentQuestion] = useState(0);
+  const [selectedAnswers, setSelectedAnswers] = useState<string[]>(
     Array(questions.length).fill(null)
   );
 
-  const [questionResults, setQuestionResults] = React.useState<number[]>(
+  const [questionResults, setQuestionResults] = useState<number[]>(
     Array(questions.length).fill(-1)
   ); //? could probably pass this down to the question component as a prop to avoid having do logic there to determine the color of the answer
 
   // Add state variable to hold references to each step element
-  const [stepRefs, setStepRefs] = React.useState<
+  const [stepRefs, setStepRefs] = useState<
     React.RefObject<HTMLLIElement>[]
   >([]);
 
-  const stepsRef = React.useRef<HTMLUListElement>(null);
+  const stepsRef = useRef<HTMLUListElement>(null);
 
   // Initialize the references when the component mounts
-  React.useEffect(() => {
-    setStepRefs(questions.map(() => React.createRef<HTMLLIElement>()));
+  useEffect(() => {
+    setStepRefs(questions.map(() => createRef<HTMLLIElement>()));
   }, [questions]);
 
   const getStepClass = (index: number) => {

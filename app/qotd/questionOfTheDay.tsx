@@ -1,10 +1,10 @@
 'use client';
 
-import React from "react";
+import { useState, useEffect } from "react";
 
 export default function QuestionOfTheDay() {
-  const [question, setQuestion] = React.useState("");
-  const [loading, setLoading] = React.useState(true);
+  const [question, setQuestion] = useState("");
+  const [loading, setLoading] = useState(true);
   const fetchUrl = "/api/qotd/random";
 
   const getQuestion = async () => {
@@ -16,7 +16,7 @@ export default function QuestionOfTheDay() {
     setLoading(false);
   }
 
-  React.useEffect(() => {
+  useEffect(() => {
     getQuestion();
   }, []);
 

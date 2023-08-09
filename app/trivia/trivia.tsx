@@ -1,6 +1,7 @@
 "use client";
 
-import React from "react";
+import { useState } from "react";
+
 import TriviaConfigForm from "./triviaConfigForm";
 import {
   TriviaConfigState,
@@ -13,9 +14,9 @@ import { TriviaApiResponse } from "@/types/openTdbTypes";
 export default function Trivia() {
   const fetchBaseUrl = "/api/trivia/";
   const [triviaConfig, setTriviaConfig] =
-    React.useState<TriviaConfigState>(defaultTriviaConfig);
-  const [questions, setQuestions] = React.useState<Question[] | null>(null);
-  const [loading, setLoading] = React.useState<boolean>(false);
+    useState<TriviaConfigState>(defaultTriviaConfig);
+  const [questions, setQuestions] = useState<Question[] | null>(null);
+  const [loading, setLoading] = useState<boolean>(false);
 
   const onGenerateTrivia = async (e: React.FormEvent<HTMLButtonElement>) => {
     setLoading(true);

@@ -1,4 +1,3 @@
-import React from "react";
 import { Url } from "next/dist/shared/lib/router/router";
 import Link from "next/link";
 import { usePathname } from "next/navigation";

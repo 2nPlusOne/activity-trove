@@ -2,7 +2,7 @@ import "./globals.scss";
 import "../inter-font/inter.css";
 import type { Metadata } from "next";
 import { Analytics } from '@vercel/analytics/react';
-import Navbar from "@/components/Navbar";
+import Navbar from "@/components/nav/Navbar";
 import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {

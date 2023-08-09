@@ -1,13 +1,13 @@
 'use client';
 
-import React from "react";
+import { useState, useEffect} from "react";
 
 export default function Riddle() {
-  const [riddle, setRiddle] = React.useState("");
-  const [answer, setAnswer] = React.useState("");
-  const [showAnswer, setShowAnswer] = React.useState(false);
-  const [loading, setLoading] = React.useState(true);
-  const [answerDisabled, setAnswerDisabled] = React.useState(false);
+  const [riddle, setRiddle] = useState("");
+  const [answer, setAnswer] = useState("");
+  const [showAnswer, setShowAnswer] = useState(false);
+  const [loading, setLoading] = useState(true);
+  const [answerDisabled, setAnswerDisabled] = useState(false);
   const fetchUrl = "/api/riddles/random";
 
   const getRiddle = async () => {
@@ -22,7 +22,7 @@ export default function Riddle() {
     setLoading(false);
   }
 
-  React.useEffect(() => {
+  useEffect(() => {
     getRiddle();
   }, []);
 

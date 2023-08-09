@@ -1,5 +1,3 @@
-import React from "react";
-
 const Footer: React.FC = () => {
   return (
     <footer className="flex items-center justify-between w-full h-auto p-3">
@@ -22,7 +20,6 @@ const Footer: React.FC = () => {
         >
           2nPlusOne
         </a>
-        &nbsp;&nbsp;
       </div>
       <BuyMeACoffee />
     </footer>
