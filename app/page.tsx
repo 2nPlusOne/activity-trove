@@ -8,7 +8,7 @@ export default function Home() {
           <div className="text-center flex flex-col items-center w-full max-w-xl">
             <h1
               className="bg-gradient-to-r from-sky-400 to-emerald-400 bg-clip-text
-                          text-3xl font-extrabold text-transparent sm:text-5xl/[3.5rem]"
+                         text-3xl font-extrabold text-transparent sm:text-5xl/[3.5rem]"
             >
               Instant Engagement.
               <span className="sm:block"> Every Time. </span>
@@ -21,31 +21,9 @@ export default function Home() {
             </p>
 
             <div className="mt-8 flex flex-col flex-wrap justify-between gap-4 min-[460px]:flex-row">
-              {/* interactive feature cards here */}
-              <Link
-                href="/jokes"
-                className="rounded-2xl p-px bg-gradient-to-tl from-emerald-400 to-sky-400 active:scale-95 transition-all hover:shadow-radial-lg hover:shadow-slate-750"
-              >
-                <div className="bg-slate-850 hover:bg-gradient-to-tl hover:from-emerald-400 hover:to-sky-400 hover:text-slate-950 p-4 rounded-[calc(1.2rem-4px)] transition-all">
-                  Hear a Joke
-                </div>
-              </Link>
-              <Link
-                href="/riddles"
-                className="rounded-2xl p-px bg-gradient-to-tl from-emerald-400 to-sky-400 active:scale-95 transition-all hover:shadow-radial-lg hover:shadow-slate-750"
-              >
-                <div className="bg-slate-850 hover:bg-gradient-to-tl hover:from-emerald-400 hover:to-sky-400 hover:text-slate-950 p-4 rounded-[calc(1.2rem-4px)] transition-all">
-                  Solve Riddles
-                </div>
-              </Link>
-              <Link
-                href="/trivia"
-                className="rounded-2xl p-px bg-gradient-to-tl from-emerald-400 to-sky-400 active:scale-95 transition-all hover:shadow-radial-lg hover:shadow-slate-750"
-              >
-                <div className="bg-slate-850 hover:bg-gradient-to-tl hover:from-emerald-400 hover:to-sky-400 hover:text-slate-950 p-4 rounded-[calc(1.2rem-4px)] transition-all">
-                  Try Trivia
-                </div>
-              </Link>
+              <CTAButton href="/jokes" text="Hear Jokes" />
+              <CTAButton href="/riddles" text="Solve Riddles" />
+              <CTAButton href="/trivia" text="Answer Trivia" />
             </div>
           </div>
         </div>
@@ -53,3 +31,15 @@ export default function Home() {
     </>
   );
 }
+
+// typescript react component for cta buttons
+const CTAButton: React.FC<{href: string, text: string}> = ({href, text}) => (
+  <Link
+    href={href}
+    className="rounded-2xl p-px bg-gradient-to-tl from-emerald-400 to-sky-400 active:scale-95 transition-all hover:shadow-radial-lg hover:shadow-[#113D40]"
+  >
+    <div className="font-medium bg-slate-850 hover:bg-gradient-to-tl hover:from-emerald-400 hover:to-sky-400 hover:text-slate-950 p-4 rounded-[calc(1.2rem-4px)] transition-all">
+      {text}
+    </div>
+  </Link>
+);
