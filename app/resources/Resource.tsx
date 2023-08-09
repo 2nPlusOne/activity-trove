@@ -18,10 +18,10 @@ const Resource: React.FC<ResourceProps> = ({ title, route, icon, starred, use_ad
              ring-emerald-400 focus:ring-4 focus:ring-emerald-100"
   >
     {starred && 
-      <span className="absolute w-5 h-5 text-2xl left-[-1.1rem] top-[-1rem]">⭐</span>  
+      <span className="absolute w-5 h-5 text-2xl left-[-18px] top-[-1rem]">⭐</span>  
     }
     {use_adblocker && 
-      <span className="absolute w-5 h-5 text-2xl left-[-1.1rem] top-[-0.8rem]">🛡️</span>  
+      <span className={`absolute w-5 h-5 text-2xl ${starred ? "left-[-17px] top-[1.6rem]" : "left-[-18px] top-[-1rem]"}`}>🛡️</span>  
     }
     <img src={icon} alt={`${title} icon`} className="w-6 h-6" />
     <span className={`text-emerald-400 text-xl font-bold`}>{title}</span>

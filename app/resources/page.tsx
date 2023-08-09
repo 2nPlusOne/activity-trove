@@ -30,6 +30,13 @@ const resources = [
     use_adblocker: false,
   },
   {
+    title: "Gartic Phone",
+    route: "https://garticphone.com/",
+    icon: "https://garticphone.com/favicon.ico",
+    starred: true,
+    use_adblocker: true,
+  },
+  {
     title: "Quizizz",
     route: "https://quizizz.com/admin",
     icon: "https://quizizz.com/favicon.ico",
@@ -70,7 +77,7 @@ const resources = [
     icon: "https://www.thegamegal.com/favicon.ico",
     starred: false,
     use_adblocker: false,
-  }
+  },
 ];
 
 export default function Resources() {
@@ -94,7 +101,7 @@ export default function Resources() {
           </p>
         </div>
 
-        <div className="mt-8 mx-2 grid justify-center grid-cols-1 min-[450px]:grid-cols-2 gap-6">
+        <div className="mt-8 mx-2 grid justify-center grid-cols-1 min-[540px]:grid-cols-2 gap-x-6 gap-y-8">
           {resources.map((resource, index) => (
             <Resource key={index} {...resource} />
           ))}
