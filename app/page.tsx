@@ -20,11 +20,15 @@ export default function Home() {
               all curated, all in one place.
             </p>
 
-            <div className="mt-8 flex flex-col flex-wrap justify-between gap-4 min-[460px]:flex-row">
+            <div className="mt-8 flex flex-col flex-wrap justify-center gap-4 min-[460px]:flex-row">
               <CTAButton href="/jokes" text="Hear Jokes" />
               <CTAButton href="/riddles" text="Solve Riddles" />
               <CTAButton href="/trivia" text="Answer Trivia" />
             </div>
+
+            {/* <div className="flex justify-center mt-4">
+              <CTAButton href="https://forms.gle/2HhKAsX91FLnzYGV7" text="Submit an Idea" />
+            </div> */}
           </div>
         </div>
       </section>
@@ -36,7 +40,7 @@ export default function Home() {
 const CTAButton: React.FC<{href: string, text: string}> = ({href, text}) => (
   <Link
     href={href}
-    className="rounded-2xl p-px bg-gradient-to-tl from-emerald-400 to-sky-400 active:scale-95 transition-all hover:shadow-radial-lg hover:shadow-[#113D40]"
+    className=" min-w-[9rem] rounded-2xl p-px bg-gradient-to-tl from-emerald-400 to-sky-400 active:scale-95 transition-all hover:shadow-radial-lg hover:shadow-[#113D40]"
   >
     <div className="font-medium bg-slate-850 hover:bg-gradient-to-tl hover:from-emerald-400 hover:to-sky-400 hover:text-slate-950 p-4 rounded-[calc(1.2rem-4px)] transition-all">
       {text}
