@@ -1,6 +1,7 @@
 import React from "react";
 import { Url } from "next/dist/shared/lib/router/router";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 export interface NavItemProps {
   title: string;
@@ -19,10 +20,12 @@ const NavItem: React.FC<NavItemProps & OnClickProps> = ({
   subItems,
   onClickFunc,
 }) => {
+  const pathname = usePathname();
+
   const content = (
     <span
       data-label={title}
-      className={`flex-grow bold-pseudo
+      className={`flex-grow bold-pseudo ${pathname === route ? "font-bold text-emerald-400" : ""}
         group-hover:text-emerald-400 focus-within:text-emerald-400 focus:text-emerald-400 group-focus-within:text-emerald-400
         group-hover:font-bold group-focus-within:font-bold transition-all`}
     >
