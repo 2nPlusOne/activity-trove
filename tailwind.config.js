@@ -74,7 +74,12 @@ module.exports = {
         'slate-1000': '#000004',
       },
       boxShadow: {
-        'radial-lg': '0 0 15px 3px rgba(0, 0, 0, 0.3)',
+        'radial-sm': '0 0 5px 1px rgba(0, 0, 0, 0.2)',
+        'radial-md': '0 0 10px 2px rgba(0, 0, 0, 0.2)',
+        'radial-lg': '0 0 15px 3px rgba(0, 0, 0, 0.2)',
+        'radial-xl': '0 0 20px 5px rgba(0, 0, 0, 0.2)',
+        'radial-2xl': '0 0 25px 5px rgba(0, 0, 0, 0.2)',
+        'radial-3xl': '0 0 30px 5px rgba(0, 0, 0, 0.2)',
       },
       fontFamily: {
         sans: [
